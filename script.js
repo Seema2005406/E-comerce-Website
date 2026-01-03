@@ -145,6 +145,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loadCartFromStorage();
     updateCartDisplay();
     
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
     // Search functionality
     document.getElementById('searchInput').addEventListener('input', function(e) {
         searchProducts(e.target.value);
@@ -161,6 +164,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Card number formatting
+    const cardNumberInput = document.querySelector('#cardPaymentForm input[placeholder*="1234"]');
+    if (cardNumberInput) {
+        cardNumberInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = formattedValue;
+        });
+    }
+
+    const expiryInput = document.querySelector('#cardPaymentForm input[placeholder*="MM/YY"]');
+    if (expiryInput) {
+        expiryInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            }
+            e.target.value = value;
+        });
+    }
 });
 
 // Load Products
@@ -213,7 +237,7 @@ function getCategoryName(category) {
 }
 
 // Filter Products
-function filterProducts(category) {
+function filterProducts(category, buttonElement) {
     currentFilter = category;
     loadProducts(category);
     
@@ -221,7 +245,9 @@ function filterProducts(category) {
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    event.target.classList.add('active');
+    if (buttonElement) {
+        buttonElement.classList.add('active');
+    }
 }
 
 // Search Products
@@ -378,14 +404,16 @@ function closeCheckout() {
 }
 
 // Select Payment Method
-function selectPaymentMethod(method) {
+function selectPaymentMethod(method, optionElement) {
     selectedPaymentMethod = method;
     
     // Update payment options UI
     document.querySelectorAll('.payment-option').forEach(option => {
         option.classList.remove('active');
     });
-    event.currentTarget.classList.add('active');
+    if (optionElement) {
+        optionElement.classList.add('active');
+    }
     
     // Update radio button
     const radioId = method.replace('-', '') + (method === 'credit-card' ? 'Card' : method === 'debit-card' ? 'Card' : method === 'google-pay' ? 'Pay' : method === 'apple-pay' ? 'Pay' : '');
@@ -529,26 +557,3 @@ window.onclick = function(event) {
         closeSuccessModal();
     }
 }
-
-// Card number formatting
-document.addEventListener('DOMContentLoaded', function() {
-    const cardNumberInput = document.querySelector('#cardPaymentForm input[placeholder*="1234"]');
-    if (cardNumberInput) {
-        cardNumberInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\s/g, '');
-            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
-            e.target.value = formattedValue;
-        });
-    }
-
-    const expiryInput = document.querySelector('#cardPaymentForm input[placeholder*="MM/YY"]');
-    if (expiryInput) {
-        expiryInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length >= 2) {
-                value = value.slice(0, 2) + '/' + value.slice(2, 4);
-            }
-            e.target.value = value;
-        });
-    }
-});

@@ -54,22 +54,22 @@
         <div class="container">
             <h2>Browse by Category</h2>
             <div class="category-grid">
-                <div class="category-card" onclick="filterProducts('pcb')">
+                <div class="category-card" onclick="filterProducts('pcb', null)">
                     <i class="fas fa-microchip"></i>
                     <h3>Custom PCBs</h3>
                     <p>Self-made printed circuit boards</p>
                 </div>
-                <div class="category-card" onclick="filterProducts('arduino')">
+                <div class="category-card" onclick="filterProducts('arduino', null)">
                     <i class="fas fa-robot"></i>
                     <h3>Arduino & Dev Boards</h3>
                     <p>Development boards & kits</p>
                 </div>
-                <div class="category-card" onclick="filterProducts('sensor')">
+                <div class="category-card" onclick="filterProducts('sensor', null)">
                     <i class="fas fa-satellite-dish"></i>
                     <h3>Sensors</h3>
                     <p>Various sensor modules</p>
                 </div>
-                <div class="category-card" onclick="filterProducts('component')">
+                <div class="category-card" onclick="filterProducts('component', null)">
                     <i class="fas fa-bolt"></i>
                     <h3>Components</h3>
                     <p>Electronic components</p>
@@ -84,11 +84,11 @@
             <div class="section-header">
                 <h2>Our Products</h2>
                 <div class="filter-buttons">
-                    <button class="filter-btn active" onclick="filterProducts('all')">All</button>
-                    <button class="filter-btn" onclick="filterProducts('pcb')">PCBs</button>
-                    <button class="filter-btn" onclick="filterProducts('arduino')">Arduino</button>
-                    <button class="filter-btn" onclick="filterProducts('sensor')">Sensors</button>
-                    <button class="filter-btn" onclick="filterProducts('component')">Components</button>
+                    <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+                    <button class="filter-btn" onclick="filterProducts('pcb', this)">PCBs</button>
+                    <button class="filter-btn" onclick="filterProducts('arduino', this)">Arduino</button>
+                    <button class="filter-btn" onclick="filterProducts('sensor', this)">Sensors</button>
+                    <button class="filter-btn" onclick="filterProducts('component', this)">Components</button>
                 </div>
             </div>
             <div id="productsGrid" class="products-grid">
@@ -209,42 +209,42 @@
                 <div class="checkout-section">
                     <h3>Payment Method</h3>
                     <div class="payment-methods">
-                        <div class="payment-option" onclick="selectPaymentMethod('credit-card')">
+                        <div class="payment-option" onclick="selectPaymentMethod('credit-card', this)">
                             <input type="radio" name="payment" id="creditCard" checked>
                             <label for="creditCard">
                                 <i class="fas fa-credit-card"></i>
                                 <span>Credit Card</span>
                             </label>
                         </div>
-                        <div class="payment-option" onclick="selectPaymentMethod('debit-card')">
+                        <div class="payment-option" onclick="selectPaymentMethod('debit-card', this)">
                             <input type="radio" name="payment" id="debitCard">
                             <label for="debitCard">
                                 <i class="fas fa-credit-card"></i>
                                 <span>Debit Card</span>
                             </label>
                         </div>
-                        <div class="payment-option" onclick="selectPaymentMethod('paypal')">
+                        <div class="payment-option" onclick="selectPaymentMethod('paypal', this)">
                             <input type="radio" name="payment" id="paypal">
                             <label for="paypal">
                                 <i class="fab fa-paypal"></i>
                                 <span>PayPal</span>
                             </label>
                         </div>
-                        <div class="payment-option" onclick="selectPaymentMethod('google-pay')">
+                        <div class="payment-option" onclick="selectPaymentMethod('google-pay', this)">
                             <input type="radio" name="payment" id="googlePay">
                             <label for="googlePay">
                                 <i class="fab fa-google"></i>
                                 <span>Google Pay</span>
                             </label>
                         </div>
-                        <div class="payment-option" onclick="selectPaymentMethod('apple-pay')">
+                        <div class="payment-option" onclick="selectPaymentMethod('apple-pay', this)">
                             <input type="radio" name="payment" id="applePay">
                             <label for="applePay">
                                 <i class="fab fa-apple"></i>
                                 <span>Apple Pay</span>
                             </label>
                         </div>
-                        <div class="payment-option" onclick="selectPaymentMethod('stripe')">
+                        <div class="payment-option" onclick="selectPaymentMethod('stripe', this)">
                             <input type="radio" name="payment" id="stripe">
                             <label for="stripe">
                                 <i class="fab fa-stripe"></i>
@@ -382,7 +382,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 TechGadgets. All rights reserved.</p>
+                <p>&copy; <span id="currentYear"></span> TechGadgets. All rights reserved.</p>
             </div>
         </div>
     </footer>
