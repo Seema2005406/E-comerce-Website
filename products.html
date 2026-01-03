@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <title>Products - ElectroTech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🔌 ElectroTech</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count" class="badge">0</span></a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Our Products</h2>
+                <p>Browse our collection of premium electronics</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="1">
+                        <img src="https://via.placeholder.com/300x300/4A90E2/ffffff?text=Smartphone" alt="Premium Smartphone">
+                        <h3>Premium Smartphone</h3>
+                        <p class="description">Latest model with advanced features</p>
+                        <p class="price">$799.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="1" data-name="Premium Smartphone" data-price="799.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="2">
+                        <img src="https://via.placeholder.com/300x300/50C878/ffffff?text=Laptop" alt="Ultra-thin Laptop">
+                        <h3>Ultra-thin Laptop</h3>
+                        <p class="description">Powerful performance in a slim design</p>
+                        <p class="price">$1,299.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="2" data-name="Ultra-thin Laptop" data-price="1299.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="3">
+                        <img src="https://via.placeholder.com/300x300/FF6B6B/ffffff?text=Headphones" alt="Wireless Headphones">
+                        <h3>Wireless Headphones</h3>
+                        <p class="description">Premium sound quality with noise cancellation</p>
+                        <p class="price">$249.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="3" data-name="Wireless Headphones" data-price="249.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="4">
+                        <img src="https://via.placeholder.com/300x300/FFD93D/ffffff?text=Smartwatch" alt="Smart Watch">
+                        <h3>Smart Watch</h3>
+                        <p class="description">Track your fitness and stay connected</p>
+                        <p class="price">$399.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="4" data-name="Smart Watch" data-price="399.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="5">
+                        <img src="https://via.placeholder.com/300x300/9B59B6/ffffff?text=Tablet" alt="Tablet Pro">
+                        <h3>Tablet Pro</h3>
+                        <p class="description">Perfect for work and entertainment</p>
+                        <p class="price">$649.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="5" data-name="Tablet Pro" data-price="649.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="6">
+                        <img src="https://via.placeholder.com/300x300/3498DB/ffffff?text=Camera" alt="Digital Camera">
+                        <h3>Digital Camera</h3>
+                        <p class="description">Professional photography made easy</p>
+                        <p class="price">$899.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="6" data-name="Digital Camera" data-price="899.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="7">
+                        <img src="https://via.placeholder.com/300x300/E74C3C/ffffff?text=Speaker" alt="Bluetooth Speaker">
+                        <h3>Bluetooth Speaker</h3>
+                        <p class="description">Portable speaker with amazing sound</p>
+                        <p class="price">$149.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="7" data-name="Bluetooth Speaker" data-price="149.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="8">
+                        <img src="https://via.placeholder.com/300x300/1ABC9C/ffffff?text=Monitor" alt="4K Monitor">
+                        <h3>4K Monitor</h3>
+                        <p class="description">Crystal clear display for professionals</p>
+                        <p class="price">$549.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="8" data-name="4K Monitor" data-price="549.99">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ElectroTech. All rights reserved. | Secure Shopping Experience</p>
+            <p>All transactions are encrypted and secure</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

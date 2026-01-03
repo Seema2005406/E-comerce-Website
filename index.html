@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.paypal.com https://www.google.com https://appleid.cdn-apple.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.paypal.com https://pay.google.com;">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <title>ElectroTech - Premium Electronics Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>🔌 ElectroTech</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count" class="badge">0</span></a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Welcome to ElectroTech</h2>
+                    <p>Your trusted source for premium electronics and gadgets</p>
+                    <a href="products.html" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon">🔒</div>
+                        <h3>Secure Payments</h3>
+                        <p>Multiple payment options with bank-grade security</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🚚</div>
+                        <h3>Fast Delivery</h3>
+                        <p>Free shipping on orders over $50</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">✅</div>
+                        <h3>Quality Guaranteed</h3>
+                        <p>All products come with warranty</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">💳</div>
+                        <h3>Multiple Payment Methods</h3>
+                        <p>Credit Card, Debit Card, PayPal, Google Pay, Apple Pay</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-product-id="1">
+                        <img src="https://via.placeholder.com/300x300/4A90E2/ffffff?text=Smartphone" alt="Premium Smartphone">
+                        <h3>Premium Smartphone</h3>
+                        <p class="price">$799.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="1" data-name="Premium Smartphone" data-price="799.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="2">
+                        <img src="https://via.placeholder.com/300x300/50C878/ffffff?text=Laptop" alt="Ultra-thin Laptop">
+                        <h3>Ultra-thin Laptop</h3>
+                        <p class="price">$1,299.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="2" data-name="Ultra-thin Laptop" data-price="1299.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="3">
+                        <img src="https://via.placeholder.com/300x300/FF6B6B/ffffff?text=Headphones" alt="Wireless Headphones">
+                        <h3>Wireless Headphones</h3>
+                        <p class="price">$249.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="3" data-name="Wireless Headphones" data-price="249.99">Add to Cart</button>
+                    </div>
+                    <div class="product-card" data-product-id="4">
+                        <img src="https://via.placeholder.com/300x300/FFD93D/ffffff?text=Smartwatch" alt="Smart Watch">
+                        <h3>Smart Watch</h3>
+                        <p class="price">$399.99</p>
+                        <button class="btn btn-secondary add-to-cart" data-id="4" data-name="Smart Watch" data-price="399.99">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="security-badges">
+            <div class="container">
+                <h2>Your Security is Our Priority</h2>
+                <div class="badges-grid">
+                    <div class="badge-item">
+                        <div class="badge-icon">🔐</div>
+                        <p>SSL Encrypted</p>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon">✓</div>
+                        <p>PCI DSS Compliant</p>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon">🛡️</div>
+                        <p>Fraud Protection</p>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon">🔒</div>
+                        <p>Secure Checkout</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ElectroTech. All rights reserved. | Secure Shopping Experience</p>
+            <p>All transactions are encrypted and secure</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
