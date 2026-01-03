@@ -57,7 +57,7 @@ A professional, secure e-commerce website for electronics gadgets with multiple 
 ## 📁 Project Structure
 
 ```
-E-comerce-Website/
+E-commerce-Website/
 ├── index.html          # Homepage with featured products
 ├── products.html       # Product listing page
 ├── cart.html          # Shopping cart page
